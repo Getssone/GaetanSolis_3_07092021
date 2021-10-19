@@ -1,0 +1,6 @@
+A l'intérieur de Utils :
+
+1.	Variables.
+2.	Fonctions.
+3.	Mixins.
+4.	Placeholders.

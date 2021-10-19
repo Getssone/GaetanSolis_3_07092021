@@ -1,0 +1,18 @@
+@function lightness-shift($color){ 
+@if ( lightness($color) < 25% ) { 
+
+    @return lighten($color, 30%); 
+    }
+    
+    @else{ 
+    @return darken($color, 30%); 
+    }
+     
+    }
+//exemple d'évolution //
+    @for $i from 1 through 4{
+        .cube-#{$i} {
+            margin: 0($i*0.25rem);
+        }
+
+    }
