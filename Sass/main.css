@@ -634,9 +634,10 @@ header {
   -webkit-box-shadow: 0.25rem 0.25rem 1rem black;
           box-shadow: 0.25rem 0.25rem 1rem black;
   margin-bottom: 15px;
-  /*animation: menu__carte__chargement 1.5s;*/
-  /*animation-fill-mode: forwards;*/
-  /*opacity: 0;*/
+  -webkit-animation: chargement__menu__minicarte 1.5s forwards;
+          animation: chargement__menu__minicarte 1.5s forwards;
+  opacity: 0;
+  /*animation: chargement__menu__minicarte 2s ease-in-out 0s infinite alternate-reverse none;*/
 }
 
 .carte__corps .les_services .menu__minicarte:hover .menu__minicarte__validation {
@@ -711,6 +712,26 @@ header {
   /*Rotation de départ*/
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+}
+
+.carte__corps .les_services .menu .animee-1 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.carte__corps .les_services .menu .animee-2 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.carte__corps .les_services .menu .animee-3 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.carte__corps .les_services .menu .animee-4 {
+  -webkit-animation-delay: 1.0s;
+          animation-delay: 1.0s;
 }
 
 .carte__commande {
@@ -906,6 +927,32 @@ header {
   90% {
     -webkit-transform: rotate(80deg);
             transform: rotate(80deg);
+  }
+}
+
+@-webkit-keyframes chargement__menu__minicarte {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes chargement__menu__minicarte {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */

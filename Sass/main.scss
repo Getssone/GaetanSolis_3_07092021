@@ -52,7 +52,7 @@ ul {
   list-style: none;
 }
 
-.chargement{
+.chargement {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -64,37 +64,31 @@ ul {
   justify-content: center;
   animation: 3s linear 1s loader both;
 
-& div{
-  width: 18px;
-  height: 18px;
-  background-color: #333;
-  display: inline-block;
+  & div {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    display: inline-block;
+  }
+
+  .rond1 {
+    background: #9356dc;
+    border-radius: 0% 100% 43% 57% / 0% 52% 48% 100%;
+    animation: rond1 2s ease-in-out 0s infinite alternate-reverse none;
+  }
+  .rond2 {
+    background: #ff79da;
+    margin: 0px 10px 10px 0px;
+    border-radius: 0% 100% 43% 57% / 0% 52% 48% 100%;
+    animation: rond2 2s ease-in-out 0s infinite alternate-reverse none;
+  }
+  .rond3 {
+    background: #99e2d0;
+    margin: 0px 0px 16px -5px;
+    border-radius: 0% 100% 43% 57% / 0% 52% 48% 100%;
+    animation: rond3 2s ease-in-out 0s infinite alternate-reverse none;
+  }
 }
-
-
-
-.rond1{
-  background: #9356dc;
-  border-radius: 0% 100% 43% 57% / 0% 52% 48% 100%; 
-  animation: rond1 2s ease-in-out 0s infinite alternate-reverse none;
-  
-}
-.rond2{
-  background: #ff79da;    
-  margin: 0px 10px 10px 0px;
-  border-radius: 0% 100% 43% 57% / 0% 52% 48% 100%;
-  animation: rond2 2s ease-in-out 0s infinite alternate-reverse none;
-}
-.rond3{
-  background: #99e2d0;  
-  margin: 0px 0px 16px -5px;
-  border-radius: 0% 100% 43% 57% / 0% 52% 48% 100%;
-  animation: rond3 2s ease-in-out 0s infinite alternate-reverse none;
-}
-
-}
-
-
 
 //<!--Index Principale-->
 
@@ -221,7 +215,7 @@ a {
     }
   }
   &__icon {
-           margin: 10px;
+    margin: 10px;
   }
 }
 
@@ -456,7 +450,7 @@ header {
 
   &__corps {
     @include desktop-only {
-    margin: 0% 17%;
+      margin: 0% 17%;
     }
     .les_services {
       .menu {
@@ -487,9 +481,10 @@ header {
           box-shadow: 0.25rem 0.25rem 1rem
             darken($color: hsl(0, 0%, 0%), $amount: 10%);
           margin-bottom: 15px;
-          /*animation: menu__carte__chargement 1.5s;*/
-          /*animation-fill-mode: forwards;*/
-          /*opacity: 0;*/
+          animation: chargement__menu__minicarte 1.5s forwards;
+          opacity: 0;
+          /*animation: chargement__menu__minicarte 2s ease-in-out 0s infinite alternate-reverse none;*/
+        
 
           &:hover {
             .menu__minicarte__validation {
@@ -502,12 +497,10 @@ header {
           }
 
           &__description {
-            
             overflow: hidden;
             flex-grow: 1;
           }
           &__prix {
-            
             display: flex;
             flex-grow: 1;
             justify-content: flex-end;
@@ -540,6 +533,19 @@ header {
               transition-duration: 0.5s;
             }
           }
+
+        }
+        .animee-1{
+          animation-delay: 0.5s;
+        }
+        .animee-2{
+          animation-delay: 0.7s;
+        }
+        .animee-3{
+          animation-delay: 0.9s;
+        }
+        .animee-4{
+          animation-delay: 1.0s;
         }
       }
     }
@@ -562,7 +568,7 @@ header {
   }
 }
 @keyframes loader {
-  from{
+  from {
     opacity: 1;
     z-index: 1;
   }
@@ -582,7 +588,7 @@ header {
   20%,
   40%,
   60%,
-  80%  {
+  80% {
     transform: rotate(-5deg);
   }
 
@@ -626,7 +632,7 @@ header {
   20%,
   40%,
   60%,
-  80%{
+  80% {
     transform: rotate(100deg);
   }
 
@@ -634,7 +640,18 @@ header {
   30%,
   50%,
   70%,
-  90%{
+  90% {
     transform: rotate(80deg);
+  }
+}
+@keyframes chargement__menu__minicarte {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
