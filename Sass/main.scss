@@ -483,8 +483,11 @@ header {
           margin-bottom: 15px;
           animation: chargement__menu__minicarte 1.5s forwards;
           opacity: 0;
-          /*animation: chargement__menu__minicarte 2s ease-in-out 0s infinite alternate-reverse none;*/
-        
+          overflow: hidden;
+          flex-grow: 1;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          
 
           &:hover {
             .menu__minicarte__validation {
@@ -499,6 +502,8 @@ header {
           &__description {
             overflow: hidden;
             flex-grow: 1;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
           &__prix {
             display: flex;
