@@ -663,6 +663,13 @@ header {
   white-space: nowrap;
 }
 
+.carte__corps .les_services .menu__minicarte__description h3,
+.carte__corps .les_services .menu__minicarte__description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .carte__corps .les_services .menu__minicarte__prix {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -737,8 +744,8 @@ header {
 }
 
 .carte__corps .les_services .menu .animee-4 {
-  -webkit-animation-delay: 1.0s;
-          animation-delay: 1.0s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .carte__commande {

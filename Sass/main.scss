@@ -487,7 +487,6 @@ header {
           flex-grow: 1;
           text-overflow: ellipsis;
           white-space: nowrap;
-          
 
           &:hover {
             .menu__minicarte__validation {
@@ -504,6 +503,12 @@ header {
             flex-grow: 1;
             text-overflow: ellipsis;
             white-space: nowrap;
+            h3,
+            p {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
           }
           &__prix {
             display: flex;
@@ -538,19 +543,18 @@ header {
               transition-duration: 0.5s;
             }
           }
-
         }
-        .animee-1{
+        .animee-1 {
           animation-delay: 0.5s;
         }
-        .animee-2{
+        .animee-2 {
           animation-delay: 0.7s;
         }
-        .animee-3{
+        .animee-3 {
           animation-delay: 0.9s;
         }
-        .animee-4{
-          animation-delay: 1.0s;
+        .animee-4 {
+          animation-delay: 1s;
         }
       }
     }
