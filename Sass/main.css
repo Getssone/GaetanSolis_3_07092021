@@ -425,10 +425,7 @@ a a:visited {
   background: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-  text-stroke-color: transparent;
-  -webkit-text-stroke-color: transparent;
 }
 
 .restaurant .carte__icon .heart.vide {
@@ -577,10 +574,7 @@ header {
   background: linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-  text-stroke-color: transparent;
-  -webkit-text-stroke-color: transparent;
 }
 
 .carte__icon .heart.vide {
