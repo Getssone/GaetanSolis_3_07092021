@@ -342,7 +342,7 @@ a a:visited {
   width: 100%;
   background: white;
   border-radius: 20px;
-  margin-bottom: 100px;
+  margin: 20px 0px;
 }
 
 @media screen and (min-width: 800px) {

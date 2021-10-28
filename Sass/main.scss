@@ -224,6 +224,7 @@ a {
   flex-flow: column nowrap;
   background: #f6f6f6;
   padding: 20px 20px;
+  
   &__carte {
     @include desktop-only {
       display: flex;
@@ -244,7 +245,7 @@ a {
     width: 100%;
     background: white;
     border-radius: 20px;
-    margin-bottom: 100px;
+    margin: 20px 0px;
     @include desktop-only {
       width: 45%;
       margin: 10px;
