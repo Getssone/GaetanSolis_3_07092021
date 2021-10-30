@@ -1,0 +1,139 @@
+.carte {
+  background: #f6f6f6;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+  margin-top: -80px;
+  /* z-index: 1; */
+  position: relative;
+
+  &__titrerestaurant {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 10px 20px;
+    @include desktop-only {
+      margin: 0% 5%;
+    }
+  }
+  
+  &__corps {
+    @include desktop-only {
+      margin: 0% 17%;
+    }
+    .les_services {
+      .menu {
+        max-width: 100%;
+        /*overflow: hidden;*/
+        padding: 0px 20px;
+
+        &__titre {
+          position: relative;
+          margin: 15px 0;
+          &:after {
+            content: "";
+            width: 30px;
+            height: 3px;
+            background: #99e2d0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+          }
+        }
+        &__minicarte {
+          display: flex;
+          background: white;
+          border-radius: 10px;
+          padding: 10px;
+          cursor: pointer;
+          overflow: hidden;
+          box-shadow: 0.25rem 0.25rem 1rem
+            darken($color: hsl(0, 0%, 0%), $amount: 10%);
+          margin-bottom: 15px;
+          animation: chargement__menu__minicarte 1.5s forwards;
+          opacity: 0;
+          overflow: hidden;
+          flex-grow: 1;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          &:hover {
+            .menu__minicarte__validation {
+              margin-right: -11px;
+
+              &__icon {
+                transform: rotate(0);
+              }
+            }
+          }
+
+          &__description {
+            overflow: hidden;
+            flex-grow: 1;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            h3,
+            p {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+          &__prix {
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-right: 10px;
+            /* font-weight: bold; */
+            /* padding-left: 7px;*/
+          }
+
+          &__validation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 20px;
+            width: 60px;
+            background: #99e2d0;
+            margin: -11px -71px -11px 0px;
+            transition-duration: 0.5s;
+
+            &__icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: white;
+              border-radius: 100px;
+              height: 25px;
+              width: 25px;
+              color: #99e2d0;
+              transform: rotate(180deg); /*Rotation de départ*/
+              transition-duration: 0.5s;
+            }
+          }
+        }
+        .animee-1 {
+          animation-delay: 0.5s;
+        }
+        .animee-2 {
+          animation-delay: 0.7s;
+        }
+        .animee-3 {
+          animation-delay: 0.9s;
+        }
+        .animee-4 {
+          animation-delay: 1s;
+        }
+      }
+    }
+  }
+  &__commande {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    
+    &--button {
+      @import bouton
+      
+    }
+  }
+}

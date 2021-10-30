@@ -1,0 +1,70 @@
+
+&--bouton {
+  background: linear-gradient(
+    350deg,
+    map-get($color, primaire) 0%,
+    map-get($color, secondaire) 100%
+  );
+  color: white;
+  font-weight: 500;
+  border-radius: 50px;
+  margin: 5px;
+  padding: 12px 18px;
+  text-align: center;
+  box-shadow: 0.05rem 0.05rem 9.2px #a6a6a6;
+
+  transition: 0.5s;
+  &:hover {
+    box-shadow: 0.2rem 0.2rem 9.2px lightness-shift(#a6a6a6);
+    //box-shadow: 0.2rem 0.2rem 9.2px darken($color: #a6a6a6, $amount: 10%);
+  }
+}
+
+&.icon__back {
+  position: absolute;
+  font-size: 20px;
+  top: 20px;
+  left: 20px;
+}
+
+&__icon {
+  position: relative;
+  height: 35px;
+  width: 35px;
+  background: transparent;
+  
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 500ms;
+    font-size: 35px;
+
+    &.plein {
+      opacity: 0;
+      background: linear-gradient(
+        350deg,
+        map-get($color, primaire) 0%,
+        map-get($color, secondaire) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-color: transparent;
+    }
+    &.vide {
+      opacity: 1;
+    }
+  }
+  &:hover {
+    .heart {
+      &.plein {
+        opacity: 1;
+      }
+      &.vide {
+        opacity: 0;
+      }
+    }
+  }
+}

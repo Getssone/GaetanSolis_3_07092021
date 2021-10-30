@@ -1,0 +1,30 @@
+// Header //
+.header__logo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: "Shrikhand";
+    font-size: xx-large;
+    @include desktop-only {
+      font-size: xxx-large;
+    }
+  }
+  .position {
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    font-weight: bold;
+    background-color: #eaeaea;
+    box-shadow: 0px 3px 4px -4px #000 inset;
+  }
+  a {
+    a:link,
+    a:visited {
+      color: black;
+      text-decoration: none;
+    }
+  }
