@@ -1,0 +1,39 @@
+.accroche {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  background-color: #f6f6f6;
+  padding: 40px 0;
+
+  & h2 {
+    padding: 0px 50px;
+    margin: 10px;
+  }
+  & p {
+    padding: 15px 10px;
+  }
+  &--bouton {
+    background: linear-gradient(
+      350deg,
+      map-get($color, primaire) 0%,
+      map-get($color, secondaire) 100%
+    );
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+    margin: 5px;
+    padding: 12px 18px;
+    text-align: center;
+    box-shadow: 0.05rem 0.05rem 9.2px #a6a6a6;
+
+    transition: 0.5s;
+    &:hover {
+      box-shadow: 0.2rem 0.2rem 9.2px lightness-shift(#a6a6a6);
+      //box-shadow: 0.2rem 0.2rem 9.2px darken($color: #a6a6a6, $amount: 10%);
+    }
+  }
+}

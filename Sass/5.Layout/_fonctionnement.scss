@@ -1,0 +1,59 @@
+.fonctionnement {
+    margin: 0px 0px 0px 30px;
+    &__list {
+      list-style: none;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      counter-reset: compteListe;
+      margin: 10px;
+    }
+  
+    &__element {
+      padding: 10px;
+      width: 80%;
+      font-weight: 500;
+      margin: 15px 0px 15px 0px;
+      border-radius: 20px;
+      background: #f6f6f6;
+      display: flex;
+      align-items: center;
+      position: relative;
+      box-shadow: 0.15rem 0.25rem 9.2px #d7d7d7;
+  
+      @include desktop-only {
+        width: 50%;
+      }
+      &:before {
+        counter-increment: compteListe;
+        content: counter(compteListe) " ";
+        height: 24px;
+        width: 24px;
+        background: #9356dc;
+        border-radius: 100px;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        left: -12px;
+      }
+  
+      & li {
+        & i {
+          color: #7d7d7d;
+          font-size: 20px;
+          content: "\f3cd";
+        }
+      }
+    }
+    &__icon {
+      margin: 10px;
+    }
+  }
+
+  &--bouton {
+    @include bouton
+  }
